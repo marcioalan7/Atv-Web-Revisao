@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Estudantes</title>
+</head>
+<body>
+    <h1>Lista de Estudantes</h1>
+    <ul>
+        {{#each estudantes}}
+    <li>
+        {{nome}} - {{idade}}
+        <form action="/estudantes/{{id}}?_method=DELETE" method="POST">
+        <button type="submit">Excluir</button>
+        </form>
+    </li>
+        {{/each}}
+    </ul>
+</body>
+</html>
